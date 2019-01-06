@@ -1,0 +1,980 @@
+/* Basic page-wide colors */
+/* Nav and right panel */
+/* Tabs */
+/* Notes and warnings */
+/* Resource groups */
+/* HTTP method-specific colors */
+/* HTTP GET */
+/* HTTP HEAD */
+/* HTTP OPTIONS */
+/* HTTP PUT */
+/* HTTP PATCH */
+/* HTTP POST */
+/* HTTP DELETE */
+/* Code colors */
+.container {
+  margin-top: 20px;
+}
+.docs__menu {
+  display: block;
+}
+.docs__menu--level-0 {
+  list-style: none;
+  padding: 0;
+}
+.docs__menu--level-1 {
+  list-style: none;
+  padding: 0;
+}
+.docs__menu-column {
+  position: fixed;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .docs__main-column {
+    margin-left: 20%;
+  }
+}
+.docs__menu-item--level-0 {
+  font-size: 25px;
+  margin-top: 16px;
+}
+.docs__menu-item--level-0 > ul {
+  display: none;
+}
+.docs__menu-item--level-0.active > ul {
+  display: block;
+}
+.docs__menu-item--level-1 {
+  font-size: 20px;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+}
+.docs__menu-item.current {
+  font-weight: bold;
+}
+.docs__menu-item.current > ul {
+  font-weight: normal;
+}
+.docs__title {
+  font-size: 40px;
+  color: #3d4882;
+  line-height: 1;
+}
+.docs__page-menu-title {
+  margin-top: 20px;
+}
+.docs__page-menu {
+  padding: 0;
+}
+.docs__page-menu-item {
+  list-style: none;
+}
+.api-blueprint {
+  /* Highlight.js Theme Tomorrow */
+  /* Highlight.js Theme Tomorrow Night */
+  /* Generic classes */
+  /* Layout classes */
+}
+.api-blueprint .hljs-comment,
+.api-blueprint .hljs-title {
+  color: #8e908c;
+}
+.api-blueprint .hljs-variable,
+.api-blueprint .hljs-attribute,
+.api-blueprint .hljs-tag,
+.api-blueprint .hljs-regexp,
+.api-blueprint .ruby .hljs-constant,
+.api-blueprint .xml .hljs-tag .hljs-title,
+.api-blueprint .xml .hljs-pi,
+.api-blueprint .xml .hljs-doctype,
+.api-blueprint .html .hljs-doctype,
+.api-blueprint .css .hljs-id,
+.api-blueprint .css .hljs-class,
+.api-blueprint .css .hljs-pseudo {
+  color: #c82829;
+}
+.api-blueprint .hljs-number,
+.api-blueprint .hljs-preprocessor,
+.api-blueprint .hljs-pragma,
+.api-blueprint .hljs-built_in,
+.api-blueprint .hljs-literal,
+.api-blueprint .hljs-params,
+.api-blueprint .hljs-constant {
+  color: #f5871f;
+}
+.api-blueprint .ruby .hljs-class .hljs-title,
+.api-blueprint .css .hljs-rules .hljs-attribute {
+  color: #eab700;
+}
+.api-blueprint .hljs-string,
+.api-blueprint .hljs-value,
+.api-blueprint .hljs-inheritance,
+.api-blueprint .hljs-header,
+.api-blueprint .ruby .hljs-symbol,
+.api-blueprint .xml .hljs-cdata {
+  color: #718c00;
+}
+.api-blueprint .css .hljs-hexcolor {
+  color: #3e999f;
+}
+.api-blueprint .hljs-function,
+.api-blueprint .python .hljs-decorator,
+.api-blueprint .python .hljs-title,
+.api-blueprint .ruby .hljs-function .hljs-title,
+.api-blueprint .ruby .hljs-title .hljs-keyword,
+.api-blueprint .perl .hljs-sub,
+.api-blueprint .javascript .hljs-title,
+.api-blueprint .coffeescript .hljs-title {
+  color: #4271ae;
+}
+.api-blueprint .hljs-keyword,
+.api-blueprint .javascript .hljs-function {
+  color: #8959a8;
+}
+.api-blueprint .hljs {
+  display: block;
+  background: white;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+.api-blueprint .coffeescript .javascript,
+.api-blueprint .javascript .xml,
+.api-blueprint .tex .hljs-formula,
+.api-blueprint .xml .javascript,
+.api-blueprint .xml .vbscript,
+.api-blueprint .xml .css,
+.api-blueprint .xml .hljs-cdata {
+  opacity: 0.5;
+}
+.api-blueprint .right .hljs-comment {
+  color: #969896;
+}
+.api-blueprint .right .css .hljs-class,
+.api-blueprint .right .css .hljs-id,
+.api-blueprint .right .css .hljs-pseudo,
+.api-blueprint .right .hljs-attribute,
+.api-blueprint .right .hljs-regexp,
+.api-blueprint .right .hljs-tag,
+.api-blueprint .right .hljs-variable,
+.api-blueprint .right .html .hljs-doctype,
+.api-blueprint .right .ruby .hljs-constant,
+.api-blueprint .right .xml .hljs-doctype,
+.api-blueprint .right .xml .hljs-pi,
+.api-blueprint .right .xml .hljs-tag .hljs-title {
+  color: #cc6666;
+}
+.api-blueprint .right .hljs-built_in,
+.api-blueprint .right .hljs-constant,
+.api-blueprint .right .hljs-literal,
+.api-blueprint .right .hljs-number,
+.api-blueprint .right .hljs-params,
+.api-blueprint .right .hljs-pragma,
+.api-blueprint .right .hljs-preprocessor {
+  color: #de935f;
+}
+.api-blueprint .right .css .hljs-rule .hljs-attribute,
+.api-blueprint .right .ruby .hljs-class .hljs-title {
+  color: #f0c674;
+}
+.api-blueprint .right .hljs-header,
+.api-blueprint .right .hljs-inheritance,
+.api-blueprint .right .hljs-name,
+.api-blueprint .right .hljs-string,
+.api-blueprint .right .hljs-value,
+.api-blueprint .right .ruby .hljs-symbol,
+.api-blueprint .right .xml .hljs-cdata {
+  color: #b5bd68;
+}
+.api-blueprint .right .css .hljs-hexcolor,
+.api-blueprint .right .hljs-title {
+  color: #8abeb7;
+}
+.api-blueprint .right .coffeescript .hljs-title,
+.api-blueprint .right .hljs-function,
+.api-blueprint .right .javascript .hljs-title,
+.api-blueprint .right .perl .hljs-sub,
+.api-blueprint .right .python .hljs-decorator,
+.api-blueprint .right .python .hljs-title,
+.api-blueprint .right .ruby .hljs-function .hljs-title,
+.api-blueprint .right .ruby .hljs-title .hljs-keyword {
+  color: #81a2be;
+}
+.api-blueprint .right .hljs-keyword,
+.api-blueprint .right .javascript .hljs-function {
+  color: #b294bb;
+}
+.api-blueprint .right .hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: .5em;
+  -webkit-text-size-adjust: none;
+}
+.api-blueprint .right .coffeescript .javascript,
+.api-blueprint .right .javascript .xml,
+.api-blueprint .right .tex .hljs-formula,
+.api-blueprint .right .xml .css,
+.api-blueprint .right .xml .hljs-cdata,
+.api-blueprint .right .xml .javascript,
+.api-blueprint .right .xml .vbscript {
+  opacity: 0.5;
+}
+.api-blueprint header {
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 12px;
+}
+.api-blueprint h1,
+.api-blueprint h2,
+.api-blueprint h3,
+.api-blueprint h4,
+.api-blueprint h5 {
+  color: #000000;
+  margin: 12px 0;
+}
+.api-blueprint h1 .permalink,
+.api-blueprint h2 .permalink,
+.api-blueprint h3 .permalink,
+.api-blueprint h4 .permalink,
+.api-blueprint h5 .permalink {
+  margin-left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.api-blueprint h1:hover .permalink,
+.api-blueprint h2:hover .permalink,
+.api-blueprint h3:hover .permalink,
+.api-blueprint h4:hover .permalink,
+.api-blueprint h5:hover .permalink {
+  opacity: 1;
+}
+.triple .api-blueprint h1 .permalink,
+.triple .api-blueprint h2 .permalink,
+.triple .api-blueprint h3 .permalink,
+.triple .api-blueprint h4 .permalink,
+.triple .api-blueprint h5 .permalink {
+  opacity: 0.15;
+}
+.triple .api-blueprint h1:hover .permalink,
+.triple .api-blueprint h2:hover .permalink,
+.triple .api-blueprint h3:hover .permalink,
+.triple .api-blueprint h4:hover .permalink,
+.triple .api-blueprint h5:hover .permalink {
+  opacity: 0.15;
+}
+.api-blueprint h1 {
+  font: 200 36px 'Raleway', Helvetica, sans-serif;
+  font-size: 36px;
+}
+.api-blueprint h2 {
+  font: 200 36px 'Raleway', Helvetica, sans-serif;
+  font-size: 30px;
+}
+.api-blueprint h3 {
+  font-size: 100%;
+  text-transform: uppercase;
+}
+.api-blueprint h5 {
+  font-size: 100%;
+  font-weight: normal;
+}
+.api-blueprint p {
+  margin: 0 0 10px;
+}
+.api-blueprint p.choices {
+  line-height: 1.6;
+}
+.api-blueprint a {
+  color: #428bca;
+  text-decoration: none;
+}
+.api-blueprint li p {
+  margin: 0;
+}
+.api-blueprint hr.split {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  padding-left: 6px;
+  margin: 12px auto;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.2) 51.4%, rgba(255, 255, 255, 0.2) 51.4%, rgba(255, 255, 255, 0) 80%);
+}
+.api-blueprint dl dt {
+  float: left;
+  width: 130px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.api-blueprint dl dd {
+  margin-left: 150px;
+}
+.api-blueprint blockquote {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15.5px;
+  padding: 10px 20px;
+  margin: 12px 0;
+  border-left: 5px solid #e8e8e8;
+}
+.api-blueprint blockquote p:last-child {
+  margin-bottom: 0;
+}
+.api-blueprint pre {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  overflow: auto;
+}
+.api-blueprint pre code {
+  color: #000000;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+.api-blueprint code {
+  color: #444444;
+  background-color: #f5f5f5;
+  font: 'Inconsolata', monospace;
+  padding: 1px 4px;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+}
+.api-blueprint ul,
+.api-blueprint ol {
+  padding-left: 2em;
+}
+.api-blueprint table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 12px;
+}
+.api-blueprint table tr:nth-child(2n) {
+  background-color: #fafafa;
+}
+.api-blueprint table th,
+.api-blueprint table td {
+  padding: 6px 12px;
+  border: 1px solid #e6e6e6;
+}
+.api-blueprint .text-muted {
+  opacity: 0.5;
+}
+.api-blueprint .note,
+.api-blueprint .warning {
+  padding: 0.3em 1em;
+  margin: 1em 0;
+  border-radius: 2px;
+  font-size: 90%;
+}
+.api-blueprint .note h1,
+.api-blueprint .warning h1,
+.api-blueprint .note h2,
+.api-blueprint .warning h2,
+.api-blueprint .note h3,
+.api-blueprint .warning h3,
+.api-blueprint .note h4,
+.api-blueprint .warning h4,
+.api-blueprint .note h5,
+.api-blueprint .warning h5,
+.api-blueprint .note h6,
+.api-blueprint .warning h6 {
+  font-family: 200 36px 'Raleway', Helvetica, sans-serif;
+  font-size: 135%;
+  font-weight: 500;
+}
+.api-blueprint .note p,
+.api-blueprint .warning p {
+  margin: 0.5em 0;
+}
+.api-blueprint .note {
+  color: #000000;
+  background-color: #f0f6fb;
+  border-left: 4px solid #428bca;
+}
+.api-blueprint .note h1,
+.api-blueprint .note h2,
+.api-blueprint .note h3,
+.api-blueprint .note h4,
+.api-blueprint .note h5,
+.api-blueprint .note h6 {
+  color: #428bca;
+}
+.api-blueprint .warning {
+  color: #000000;
+  background-color: #fbf1f0;
+  border-left: 4px solid #c9302c;
+}
+.api-blueprint .warning h1,
+.api-blueprint .warning h2,
+.api-blueprint .warning h3,
+.api-blueprint .warning h4,
+.api-blueprint .warning h5,
+.api-blueprint .warning h6 {
+  color: #c9302c;
+}
+.api-blueprint header {
+  margin-top: 24px;
+}
+.api-blueprint nav {
+  top: 24px;
+  bottom: 0;
+  overflow-y: auto;
+  /* Remove the top border from the first item in each group */
+}
+.api-blueprint nav .resource-group {
+  padding: 0;
+}
+.api-blueprint nav .resource-group .heading {
+  position: relative;
+}
+.api-blueprint nav .resource-group .heading .chevron {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  opacity: 0.5;
+}
+.api-blueprint nav .resource-group .heading a {
+  display: block;
+  color: #000000;
+  opacity: 0.7;
+  border-left: 2px solid transparent;
+  margin: 0;
+}
+.api-blueprint nav .resource-group .heading a:hover {
+  text-decoration: none;
+  background-color: bad-color;
+  border-left: 2px solid #000000;
+}
+.api-blueprint nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  /* Spacing for first level items */
+  /* Adjust spacing for nested lists */
+}
+.api-blueprint nav ul a {
+  display: block;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-top: 1px solid #d9d9d9;
+  border-left: 2px solid transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.api-blueprint nav ul a:hover {
+  text-decoration: none;
+  background-color: bad-color;
+  border-left: 2px solid #000000;
+}
+.api-blueprint nav ul > li {
+  margin: 0;
+}
+.api-blueprint nav ul > li:first-child {
+  margin-top: -12px;
+}
+.api-blueprint nav ul > li:last-child {
+  margin-bottom: -12px;
+}
+.api-blueprint nav ul ul a {
+  padding-left: 24px;
+}
+.api-blueprint nav ul ul li {
+  margin: 0;
+}
+.api-blueprint nav ul ul li:first-child {
+  margin-top: 0;
+}
+.api-blueprint nav ul ul li:last-child {
+  margin-bottom: 0;
+}
+.api-blueprint nav > div > div > ul > li:first-child > a {
+  border-top: none;
+}
+.api-blueprint .preload * {
+  transition: none !important;
+}
+.api-blueprint .pull-left {
+  float: left;
+}
+.api-blueprint .pull-right {
+  float: right;
+}
+.api-blueprint .badge {
+  display: inline-block;
+  float: right;
+  min-width: 10px;
+  min-height: 14px;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin: -2px 0;
+}
+.api-blueprint .badge.get {
+  color: #70bbe1;
+  background-color: #d9edf7;
+}
+.api-blueprint .badge.head {
+  color: #70bbe1;
+  background-color: #d9edf7;
+}
+.api-blueprint .badge.options {
+  color: #70bbe1;
+  background-color: #d9edf7;
+}
+.api-blueprint .badge.put {
+  color: #f0db70;
+  background-color: #fcf8e3;
+}
+.api-blueprint .badge.patch {
+  color: #f0db70;
+  background-color: #fcf8e3;
+}
+.api-blueprint .badge.post {
+  color: #93cd7c;
+  background-color: #dff0d8;
+}
+.api-blueprint .badge.delete {
+  color: #ce8383;
+  background-color: #f2dede;
+}
+.api-blueprint .collapse-button {
+  float: right;
+}
+.api-blueprint .collapse-button .close {
+  display: none;
+  color: #428bca;
+  cursor: pointer;
+}
+.api-blueprint .collapse-button .open {
+  color: #428bca;
+  cursor: pointer;
+}
+.api-blueprint .collapse-button.show .close {
+  display: inline;
+}
+.api-blueprint .collapse-button.show .open {
+  display: none;
+}
+.api-blueprint .collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.api-blueprint .collapse-content > ul > li > a {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.api-blueprint nav {
+  width: 180px;
+}
+.api-blueprint .container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.api-blueprint .container .row .content {
+  margin-left: 204px;
+  width: 696px;
+}
+.api-blueprint .container .row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.api-blueprint .container-fluid nav {
+  width: 22%;
+}
+.api-blueprint .container-fluid .row .content {
+  margin-left: 24%;
+}
+.api-blueprint .container-fluid.triple nav {
+  width: 16.5%;
+  padding-right: 1px;
+}
+.api-blueprint .container-fluid.triple .row .content {
+  position: relative;
+  margin-left: 16.5%;
+  padding-left: 24px;
+}
+.api-blueprint .middle:before,
+.api-blueprint .middle:after {
+  content: '';
+  display: table;
+}
+.api-blueprint .middle:after {
+  clear: both;
+}
+.api-blueprint .middle {
+  box-sizing: border-box;
+  width: 51.5%;
+  padding-right: 12px;
+}
+.api-blueprint .right {
+  box-sizing: border-box;
+  float: right;
+  width: 48.5%;
+  padding-left: 12px;
+}
+.api-blueprint .right a {
+  color: #428bca;
+}
+.api-blueprint .right h1,
+.api-blueprint .right h2,
+.api-blueprint .right h3,
+.api-blueprint .right h4,
+.api-blueprint .right h5,
+.api-blueprint .right p,
+.api-blueprint .right div {
+  color: #ffffff;
+}
+.api-blueprint .right pre {
+  background-color: #1d1f21;
+  border: 1px solid #1d1f21;
+}
+.api-blueprint .right pre code {
+  color: #c5c8c6;
+}
+.api-blueprint .right .description {
+  margin-top: 12px;
+}
+.api-blueprint .triple .resource-heading {
+  font-size: 125%;
+}
+.api-blueprint .definition {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.api-blueprint .definition .method {
+  font-weight: bold;
+}
+.api-blueprint .definition .method.get {
+  color: #2e8ab8;
+}
+.api-blueprint .definition .method.head {
+  color: #2e8ab8;
+}
+.api-blueprint .definition .method.options {
+  color: #2e8ab8;
+}
+.api-blueprint .definition .method.post {
+  color: #55b82e;
+}
+.api-blueprint .definition .method.put {
+  color: #b8a12e;
+}
+.api-blueprint .definition .method.patch {
+  color: #b8a12e;
+}
+.api-blueprint .definition .method.delete {
+  color: #b82e2e;
+}
+.api-blueprint .definition .uri {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.api-blueprint .definition .hostname {
+  opacity: 0.5;
+}
+.api-blueprint .example-names {
+  background-color: #eeeeee;
+  padding: 12px;
+  border-radius: 6px;
+}
+.api-blueprint .example-names .tab-button {
+  cursor: pointer;
+  color: #000000;
+  border: 1px solid #dddddd;
+  padding: 6px;
+  margin-left: 12px;
+}
+.api-blueprint .example-names .tab-button.active {
+  background-color: #d5d5d5;
+}
+.api-blueprint .right .example-names {
+  background-color: #444444;
+}
+.api-blueprint .right .example-names .tab-button {
+  color: #ffffff;
+  border: 1px solid #666666;
+  border-radius: 6px;
+}
+.api-blueprint .right .example-names .tab-button.active {
+  background-color: #5e5e5e;
+}
+.api-blueprint #nav-background {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16.5%;
+  padding-right: 14.399999999999999px;
+  background-color: #fbfbfb;
+  border-right: 1px solid #f0f0f0;
+  z-index: -1;
+}
+.api-blueprint #right-panel-background {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  bottom: -12px;
+  width: 48.6%;
+  background-color: #333333;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  .api-blueprint nav {
+    width: 162px;
+  }
+  .api-blueprint .container {
+    max-width: 840px;
+  }
+  .api-blueprint .container .row .content {
+    margin-left: 224px;
+    width: 606px;
+  }
+}
+@media (max-width: 992px) {
+  .api-blueprint nav {
+    width: 138.6px;
+  }
+  .api-blueprint .container {
+    max-width: 720px;
+  }
+  .api-blueprint .container .row .content {
+    margin-left: 194px;
+    width: 526px;
+  }
+}
+@media (max-width: 768px) {
+  .api-blueprint nav {
+    display: none;
+  }
+  .api-blueprint .container {
+    width: 95%;
+    max-width: none;
+  }
+  .api-blueprint .container .row .content,
+  .api-blueprint .container-fluid .row .content,
+  .api-blueprint .container-fluid.triple .row .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+  .api-blueprint #nav-background {
+    display: none;
+  }
+  .api-blueprint #right-panel-background {
+    width: 48.6%;
+  }
+}
+.api-blueprint .resource-group {
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.api-blueprint .resource-group h2.group-heading,
+.api-blueprint .resource-group .heading a {
+  padding: 12px;
+  margin: -12px -12px 12px -12px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9d9d9;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.api-blueprint .triple .content .resource-group {
+  padding: 0;
+  border: none;
+}
+.api-blueprint .triple .content .resource-group h2.group-heading,
+.api-blueprint .triple .content .resource-group .heading a {
+  margin: 0 0 12px 0;
+  border: 1px solid #d9d9d9;
+}
+.api-blueprint nav .resource-group .heading a {
+  padding: 12px;
+  margin-bottom: 0;
+}
+.api-blueprint nav .resource-group .collapse-content {
+  padding: 0;
+}
+.api-blueprint .action {
+  margin-bottom: 12px;
+  padding: 12px 12px 0 12px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+.api-blueprint .action h4.action-heading {
+  padding: 6px 12px;
+  margin: -12px -12px 12px -12px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow: hidden;
+}
+.api-blueprint .action h4.action-heading .name {
+  float: right;
+  font-weight: normal;
+  padding: 6px 0;
+}
+.api-blueprint .action h4.action-heading .name-left {
+  font-weight: normal;
+  padding: 6px 0;
+  display: block;
+}
+.api-blueprint .action h4.action-heading .method {
+  padding: 6px 12px;
+  margin-right: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.api-blueprint .action h4.action-heading .method.get {
+  color: #000000;
+  background-color: #337ab7;
+}
+.api-blueprint .action h4.action-heading .method.neutral {
+  color: #000000;
+  background-color: #ddd;
+}
+.api-blueprint .action h4.action-heading .method.head {
+  color: #000000;
+  background-color: #337ab7;
+}
+.api-blueprint .action h4.action-heading .method.options {
+  color: #000000;
+  background-color: #337ab7;
+}
+.api-blueprint .action h4.action-heading .method.put {
+  color: #000000;
+  background-color: #ed9c28;
+}
+.api-blueprint .action h4.action-heading .method.patch {
+  color: #000000;
+  background-color: #ed9c28;
+}
+.api-blueprint .action h4.action-heading .method.post {
+  color: #000000;
+  background-color: #5cb85c;
+}
+.api-blueprint .action h4.action-heading .method.delete {
+  color: #000000;
+  background-color: #d9534f;
+}
+.api-blueprint .action h4.action-heading code {
+  color: #444444;
+  background-color: #f5f5f5;
+  border-color: #cfcfcf;
+  font-weight: normal;
+  word-break: break-all;
+  display: inline-block;
+  margin-top: 2px;
+}
+.api-blueprint .action dl.inner {
+  padding-bottom: 2px;
+}
+.api-blueprint .action .title {
+  border-bottom: 1px solid #ffffff;
+  margin: 0 -12px -1px -12px;
+  padding: 12px;
+}
+.api-blueprint .action.get {
+  border-color: #bce8f1;
+}
+.api-blueprint .action.get h4.action-heading {
+  color: #337ab7;
+  background: #d9edf7;
+  border-bottom-color: #bce8f1;
+}
+.api-blueprint .action.head {
+  border-color: #bce8f1;
+}
+.api-blueprint .action.head h4.action-heading {
+  color: #337ab7;
+  background: #d9edf7;
+  border-bottom-color: #bce8f1;
+}
+.api-blueprint .action.options {
+  border-color: #bce8f1;
+}
+.api-blueprint .action.options h4.action-heading {
+  color: #337ab7;
+  background: #d9edf7;
+  border-bottom-color: #bce8f1;
+}
+.api-blueprint .action.neutral {
+  border-color: #d6e9c6;
+}
+.api-blueprint .action.neutral h4.action-heading {
+  color: #222;
+  background: #eee;
+  border-bottom-color: #d6e9c6;
+}
+.api-blueprint .action.post {
+  border-color: #d6e9c6;
+}
+.api-blueprint .action.post h4.action-heading {
+  color: #5cb85c;
+  background: #dff0d8;
+  border-bottom-color: #d6e9c6;
+}
+.api-blueprint .action.put {
+  border-color: #faebcc;
+}
+.api-blueprint .action.put h4.action-heading {
+  color: #ed9c28;
+  background: #fcf8e3;
+  border-bottom-color: #faebcc;
+}
+.api-blueprint .action.patch {
+  border-color: #faebcc;
+}
+.api-blueprint .action.patch h4.action-heading {
+  color: #ed9c28;
+  background: #fcf8e3;
+  border-bottom-color: #faebcc;
+}
+.api-blueprint .action.delete {
+  border-color: #ebccd1;
+}
+.api-blueprint .action.delete h4.action-heading {
+  color: #d9534f;
+  background: #f2dede;
+  border-bottom-color: #ebccd1;
+}
+.api-blueprint td.required {
+  font-weight: bold;
+}
+.api-blueprint td.required:after {
+  content: ' *';
+}
+.api-blueprint pre.example {
+  position: relative;
+}
+.api-blueprint pre.example:after {
+  content: 'Example';
+  color: #666;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+img {
+  max-width: 100%;
+}
+li > p {
+  display: inline-block;
+}

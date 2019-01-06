@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="{pathPrefix}">
+    <meta charset="utf-8" />
+    <title>{pageTitle}</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    {#stylesheets}
+    <link rel="stylesheet" type="text/css" href="{.}"/>
+    {/stylesheets}
+</head>
+<body>
+
+    <div class="container">
+        <div class="docs__menu-column">
+            <div class="docs__title">{menuTitle}</div>
+            <ul class="docs__menu docs__menu--level-0">
+                <li class="docs__menu-item docs__menu-item--level-0{@eq key=isHome value="true" type="boolean"} active current{/eq}"><a href="index.html">Homepage</a></li>
+                {#menu}
+                <li class="docs__menu-item docs__menu-item--level-0{@menulevel /}">
+                    <a href="{dir}.html">{title}</a>
+                    {>menu level=1/}
+                </li>
+                {/menu}
+            </ul>
+
+            <h4 class="docs__page-menu-title">Page contents</h4>
+            <ul class="docs__page-menu">
+                {#content}
+                    <li class="docs__page-menu-item"><a href="{url}#{title}">{title}</a></li>
+                {/content}
+            </ul>
+
+        </div>
+        <div class="docs__main-column col-md-9 col-md-offset-2">
+            {#content}
+                <span id="{title}"></span>
+                {content|s} {contentSeparator|s}
+            {/content}
+        </div>
+
+    </div>
+
+    {?jquery}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    {/jquery}
+    {?javascripts}{#javascripts}
+        <script type="text/javascript">{.|s}</script>
+    {/javascripts}{/javascripts}
+
+
+</body>
+</html>

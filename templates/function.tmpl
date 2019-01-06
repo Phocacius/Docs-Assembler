@@ -1,0 +1,23 @@
+noRest = 1
+----
+FORMAT: 1A
+HOST: {host}
+
+# {title}
+
+## Group [/]
+{#data}{@eq key=kind value="function"}
+### {name} [GET]
+
+{description}
+{?params}
++ Request
+    + Attributes {#params}
+        + {name} (number) - {~lb}{@formatType type=type.names /}{~rb}{description}{/params}
+{/params}
+{?returns}
++ Response
+    + Attributes {#returns}
+        + ret (number) - {~lb}{@formatType type=type.names /}{~rb} {description}{/returns}
+{/returns}{/eq}
+{/data}

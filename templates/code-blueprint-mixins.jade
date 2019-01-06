@@ -1,0 +1,177 @@
+mixin Nav()
+    //- Draw a navigation bar, which includes links to individual
+    //- resources and actions.
+    nav
+        if self.api.navItems && self.api.navItems.length
+            .resource-group
+                .heading
+                    .chevron
+                        i.open.fa.fa-angle-down
+                    a(href='javascript:;', onclick='document.location.hash="#top"') Overview
+                .collapse-content
+                    ul: each item in self.api.navItems
+                        li
+                            a(href='javascript:;', onclick='document.location.hash="' + item[1] + '"')!= item[0]
+        each resourceGroup in self.api.resourceGroups || []
+            .resource-group
+                .heading
+                    .chevron
+                        i.open.fa.fa-angle-down
+                    a(href='javascript:;', onclick='document.location.hash="' + resourceGroup.elementLink + '"')!= resourceGroup.name || ''
+                .collapse-content
+                    ul
+                        each item in resourceGroup.navItems || []
+                            li
+                                a(href='javascript:;', onclick='document.location.hash="' + item[1] + '"')!= item[0]
+                        each resource in resourceGroup.resources || []
+                            li
+                                if !self.condenseNav || (resource.actions.length != 1)
+                                    a(href='javascript:;', onclick='document.location.hash="' + resource.elementLink + '"')!= resource.name || 'Resource'
+                                    ul: each action in resource.actions || []
+                                        li: a(href='javascript:;', onclick='document.location.hash="' + action.elementLink + '"')
+                                            != action.name || action.method + ' ' + (action.attributes && action.attributes.uriTemplate || resource.uriTemplate)
+                                else
+                                    - var action = resource.actions[0]
+                                    a(href='javascript:;', onclick='document.location.hash="' + action.elementLink + '"')
+                                        != action.name || resource.name || action.method + ' ' + (action.attributes && action.attributes.uriTemplate || resource.uriTemplate)
+
+mixin Parameters(params)
+    //- Draw a definition list of parameter names, types, defaults,
+    //- examples and descriptions.
+    .title
+        strong URI Parameters
+        .collapse-button.show
+            span.close Hide
+            span.open Show
+    .collapse-content
+        dl.inner: each param in params || []
+            dt= self.urldec(param.name)
+            dd
+                code= param.type || 'string'
+                | &nbsp;
+                if param.required
+                    span.required (required)
+                else
+                    span (optional)
+                | &nbsp;
+                if param.default
+                    span.text-info.default
+                        strong Default:&nbsp;
+                        span= param.default
+                    | &nbsp;
+                if param.example
+                    span.text-muted.example
+                        strong Example:&nbsp;
+                        span= param.example
+                != param.description
+                if param.values.length
+                    p.choices
+                        strong Choices:&nbsp;
+                        each value in param.values
+                            code= self.urldec(value.value)
+                            = ' '
+
+mixin RequestResponse(title, request, collapse, isRequest)
+    .title
+        strong
+            != title
+            if request.name
+                | &nbsp;&nbsp;
+        if collapse && request.hasContent
+            .collapse-button
+                span.close Hide
+                span.open Show
+    +RequestResponseBody(request, collapse, false, isRequest)
+
+mixin RequestResponseBody(request, collapse, showBlank, isRequest)
+    if request.hasContent || showBlank
+
+        div(class=collapse ? 'collapse-content' : ''): .inner
+            if request.description
+                .description!= request.description
+
+            if request.schema
+                - var schema = JSON.parse(request.schema)
+                table(style="width: 100%;")
+                    thead
+                        tr
+                            if isRequest
+                                th Parameter name
+                            th Type
+                            th Description
+                            each description, name  in schema.properties || []
+                                +AttributesTable(schema, name, description, '', isRequest)
+                div(style="height: 1px;")
+
+            if request.body && !request.schema
+                pre.example: code
+                    != self.highlight(request.body, null, ['json', 'yaml', 'xml', 'javascript'])
+                div(style="height: 10px;")
+
+            if !request.hasContent
+                .description.text-muted #{isRequest ? 'no parameters' : 'no return value'}
+                div(style="height: 1px;")
+
+mixin AttributesTable(schema, name, params, indention, isRequest)
+    tr
+        if isRequest
+            td(class=schema.required && schema.required.indexOf(name) >= 0 ? 'required' : '') !{indention}#{name}
+        - var isImplicitType = params.description.substr(0, 1) === '{'
+        - var closingBracketPosition = params.description.indexOf('}');
+        if isImplicitType
+            td #{params.description.substr(1, closingBracketPosition - 1)}
+            td #{params.description.substr(closingBracketPosition + 1)}
+        else
+            td #{params.type}
+            td #{params.description}
+    each description, childName in params.properties || []
+        +AttributesTable(schema, childName, description, indention + '&nbsp;&nbsp;&nbsp;', isRequest)
+
+mixin Examples(resourceGroup, resource, action)
+    each example in action.examples
+        each request in example.requests
+            +RequestResponse('Parameters', request, false, true)
+        each response in example.responses
+            +RequestResponse('Return Value', response, false, false)
+
+mixin Content()
+    //- Page header and API description
+    header
+        h1#top!= self.api.name || 'API Documentation'
+
+    if self.api.descriptionHtml
+        != self.api.descriptionHtml
+
+    //- Loop through and display information about all the resource
+    //- groups, resources, and actions.
+    each resourceGroup in self.api.resourceGroups || []
+        section.resource-group(id=resourceGroup.elementId)
+            h2.group-heading
+                != resourceGroup.name || ''
+                = " "
+            if resourceGroup.descriptionHtml
+                != resourceGroup.descriptionHtml
+
+            each resource in resourceGroup.resources || []
+                .resource(id=resource.elementId)
+                    h3.resource-heading
+                        != resource.name || ((resource.actions[0] != null) && resource.actions[0].name) || 'Resource'
+                        = " "
+                        a.permalink(href=resource.elementLink) &nbsp;&para;
+                    if resource.description
+                        != resource.description
+
+                    each action in resource.actions || []
+                        .action(class='neutral', id=action.elementId)
+                            h4.action-heading
+                                a.name-left(class='get', href='javascript:;', onclick = 'document.location.hash="' + action.elementLink + '"')
+                                    != action.name
+                            if action.description
+                                != action.description
+
+                            //- A list of sub-sections for parameters, requests
+                            //- and responses.
+                            if action.parameters.length
+                                +Parameters(action.parameters)
+                            if action.examples
+                                +Examples(resourceGroup, resource, action)

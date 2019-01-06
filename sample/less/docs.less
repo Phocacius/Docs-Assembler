@@ -1,0 +1,94 @@
+.container {
+  margin-top: 20px;
+}
+
+.docs__menu {
+  display: block;
+
+  &--level-0 {
+    list-style: none;
+    padding: 0;
+  }
+
+  &--level-1 {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-column {
+    position: fixed;
+    overflow-y: auto;
+    max-height: 100%;
+    padding-bottom: 30px;
+
+  }
+}
+
+.docs__main-column {
+  @media (min-width: 992px) {
+    margin-left: 20%;
+  }
+}
+
+.docs__menu-item {
+
+  &--level-0 {
+    font-size: 25px;
+    margin-top: 16px;
+
+    > ul {
+      display: none;
+    }
+    &.active > ul {
+      display: block;
+    }
+  }
+
+  &--level-1 {
+    font-size: 20px;
+    padding: 6px 0;
+
+    border-bottom: 1px solid #ccc;
+
+  }
+
+  &.current {
+    font-weight: bold;
+    > ul {
+      font-weight: normal;
+    }
+  }
+
+}
+
+.docs__title {
+  font-size: 40px;
+  color: #3d4882;
+  line-height:1;
+}
+
+.docs__page-menu-title {
+  margin-top: 20px;
+}
+
+.docs__page-menu {
+  padding: 0;
+}
+
+
+.docs__page-menu-item {
+  list-style: none;
+}
+
+
+.api-blueprint {
+  @import "api-blueprint.less";
+}
+
+img {
+  max-width: 100%;
+}
+
+li > p {
+  display: inline-block;
+}

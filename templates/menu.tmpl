@@ -1,0 +1,17 @@
+<ul class="docs__menu docs__menu--level-{level}">
+    {#menu}
+    <li class="docs__menu-item docs__menu-item--level-{level}{@menulevel level=level /}">
+        <a href="{dir}.html">{title}</a>
+        {! nesting in parameters is unfortunately not possible in dust !}
+        {@select key=level}
+            {@eq value=1} {>menu level=2 /} {/eq}
+            {@eq value=2} {>menu level=3 /} {/eq}
+            {@eq value=3} {>menu level=4 /} {/eq}
+            {@eq value=4} {>menu level=5 /} {/eq}
+            {@eq value=5} {>menu level=6 /} {/eq}
+            {@eq value=6} {>menu level=7 /} {/eq}
+        {/select}
+
+    </li>
+    {/menu}
+</ul>

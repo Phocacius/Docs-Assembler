@@ -1,0 +1,12 @@
+doctype
+
+include code-blueprint-mixins.jade
+
+.row.api-blueprint.code-blueprint
+    .col-md-3
+        block nav
+            +Nav(false)
+
+    .col-md-9
+        block content
+            +Content('primary', false)

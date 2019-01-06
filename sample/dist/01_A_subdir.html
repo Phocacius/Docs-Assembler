@@ -1,0 +1,238 @@
+<!DOCTYPE html><html><head><base href=""><meta charset="utf-8" /><title>Sample Documentation</title><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="css/docs.css"/><link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/></head><body><div class="container"><div class="docs__menu-column"><div class="docs__title">Sample Docs</div><ul class="docs__menu docs__menu--level-0"><li class="docs__menu-item docs__menu-item--level-0"><a href="index.html">Homepage</a></li><li class="docs__menu-item docs__menu-item--level-0 active current"><a href="01_A_subdir.html">A subdir</a><ul class="docs__menu docs__menu--level-1"><li class="docs__menu-item docs__menu-item--level-1 active"><a href="01_A_subdir/01_Can_be_nested.html">Can be nested</a> <ul class="docs__menu docs__menu--level-2"><li class="docs__menu-item docs__menu-item--level-2 active"><a href="01_A_subdir/01_Can_be_nested/01_Infinitely.html">Infinitely</a> <ul class="docs__menu docs__menu--level-3"></ul> </li></ul> </li></ul></li><li class="docs__menu-item docs__menu-item--level-0"><a href="02_Another_Subdir.html">Another Subdir</a><ul class="docs__menu docs__menu--level-1"></ul></li></ul><h4 class="docs__page-menu-title">Page contents</h4><ul class="docs__page-menu"><li class="docs__page-menu-item"><a href="01_A_subdir.html#Textfile">Textfile</a></li><li class="docs__page-menu-item"><a href="01_A_subdir.html#Markdown">Markdown</a></li><li class="docs__page-menu-item"><a href="01_A_subdir.html#HTML">HTML</a></li><li class="docs__page-menu-item"><a href="01_A_subdir.html#API Blueprint">API Blueprint</a></li><li class="docs__page-menu-item"><a href="01_A_subdir.html#Code Blueprint">Code Blueprint</a></li></ul></div><div class="docs__main-column col-md-9 col-md-offset-2"><span id="Textfile"></span>A textfile <hr><span id="Markdown"></span><h2>Markdown</h2>
+ <hr><span id="HTML"></span><h2>HTML</h2> <hr><span id="API Blueprint"></span><!DOCTYPE html><div class="row api-blueprint"><div class="col-md-3"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="javascript:;" onclick="document.location.hash=&quot;#&quot;"></a></div><div class="collapse-content"><ul><li><a href="javascript:;" onclick="document.location.hash=&quot;#user-section-get&quot;"><span class="badge get"><i class="fa fa-arrow-down"></i></span>getAllUsers</a></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="https://myapi.org">https://myapi.org</a></p></nav></div><div class="col-md-9"><header><h1 id="top">MyAPI</h1></header><p>Some text</p>
+<section id="" class="resource-group"><h2 class="group-heading"> </h2><div id="user-section" class="resource"><h3 class="resource-heading">User Section <a href="#user-section" class="permalink">&nbsp;&para;</a></h3><div id="user-section-get" class="action get"><h4 class="action-heading"><div class="name">getAllUsers</div><a href="javascript:;" onclick="document.location.hash=&quot;#user-section-get&quot;" class="method get">GET</a><code class="uri">/users</code></h4>Returns a list of users<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://myapi.org</span>/users</span></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre class="example"><code>[
+  {
+    "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"username"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"test@mail.de"</span>
+  </span>}
+]</code></pre><div style="height: 10px;"></div></div></div></div></div></section></div></div> <hr><span id="Code Blueprint"></span><!DOCTYPE html><div class="row api-blueprint code-blueprint"><div class="col-md-3"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="javascript:;" onclick="document.location.hash=&quot;#&quot;"></a></div><div class="collapse-content"><ul><li><a href="javascript:;" onclick="document.location.hash=&quot;#usermanager-get&quot;">getAllUsers</a></li></ul></div></div></nav></div><div class="col-md-9"><header><h1 id="top">Code documentation</h1></header><p>Some text</p>
+<section id="" class="resource-group"><h2 class="group-heading"> </h2><div id="usermanager" class="resource"><h3 class="resource-heading">UserManager <a href="#usermanager" class="permalink">&nbsp;&para;</a></h3><div id="usermanager-get" class="action neutral"><h4 class="action-heading"><a href="javascript:;" onclick="document.location.hash=&quot;#usermanager-get&quot;" class="name-left get">getAllUsers</a></h4>Returns a list of users<div class="title"><strong>Return Value&nbsp;&nbsp;</strong></div><div><div class="inner"><pre class="example"><code>[
+  {
+    "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"username"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"test@mail.de"</span>
+  </span>}
+]</code></pre><div style="height: 10px;"></div></div></div></div></div></section></div></div> <hr></div></div><script type="text/javascript">/* eslint-env browser */
+/* eslint quotes: [2, "single"] */
+'use strict';
+
+/*
+ Determine if a string ends with another string.
+ */
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+/*
+ Get a list of direct child elements by class name.
+ */
+function childrenByClass(element, name) {
+    var filtered = [];
+
+    for (var i = 0; i < element.children.length; i++) {
+        var child = element.children[i];
+        var classNames = child.className.split(' ');
+        if (classNames.indexOf(name) !== -1) {
+            filtered.push(child);
+        }
+    }
+
+    return filtered;
+}
+
+/*
+ Get an array [width, height] of the window.
+ */
+function getWindowDimensions() {
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.body,
+        x = w.innerWidth || e.clientWidth || g.clientWidth,
+        y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+    return [x, y];
+}
+
+/*
+ Collapse or show a request/response example.
+ */
+function toggleCollapseButton(event) {
+    var button = event.target.parentNode;
+    var content = button.parentNode.nextSibling;
+    var inner = content.children[0];
+
+    if (button.className.indexOf('collapse-button') === -1) {
+        // Clicked without hitting the right element?
+        return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        // Currently showing, so let's hide it
+        button.className = 'collapse-button';
+        content.style.maxHeight = '0px';
+    } else {
+        // Currently hidden, so let's show it
+        button.className = 'collapse-button show';
+        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+function toggleTabButton(event) {
+    var i, index;
+    var button = event.target;
+
+    // Get index of the current button.
+    var buttons = childrenByClass(button.parentNode, 'tab-button');
+    for (i = 0; i < buttons.length; i++) {
+        if (buttons[i] === button) {
+            index = i;
+            button.className = 'tab-button active';
+        } else {
+            buttons[i].className = 'tab-button';
+        }
+    }
+
+    // Hide other tabs and show this one.
+    var tabs = childrenByClass(button.parentNode.parentNode, 'tab');
+    for (i = 0; i < tabs.length; i++) {
+        if (i === index) {
+            tabs[i].style.display = 'block';
+        } else {
+            tabs[i].style.display = 'none';
+        }
+    }
+}
+
+/*
+ Collapse or show a navigation menu. It will not be hidden unless it
+ is currently selected or `force` has been passed.
+ */
+function toggleCollapseNav(event, force) {
+    var heading = event.target.parentNode;
+    var content = heading.nextSibling;
+    var inner = content.children[0];
+
+    if (heading.className.indexOf('heading') === -1) {
+        // Clicked without hitting the right element?
+        return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        // Currently showing, so let's hide it, but only if this nav item
+        // is already selected. This prevents newly selected items from
+        // collapsing in an annoying fashion.
+        if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
+            content.style.maxHeight = '0px';
+        }
+    } else {
+        // Currently hidden, so let's show it
+        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+/*
+ Refresh the page after a live update from the server. This only
+ works in live preview mode (using the `--server` parameter).
+ */
+function refresh(body) {
+    document.querySelector('body').className = 'preload';
+    document.body.innerHTML = body;
+
+    // Re-initialize the page
+    init();
+    autoCollapse();
+
+    document.querySelector('body').className = '';
+}
+
+/*
+ Determine which navigation items should be auto-collapsed to show as many
+ as possible on the screen, based on the current window height. This also
+ collapses them.
+ */
+function autoCollapse() {
+    var windowHeight = getWindowDimensions()[1];
+    var itemsHeight = 64; /* Account for some padding */
+    var itemsArray = Array.prototype.slice.call(
+        document.querySelectorAll('nav .resource-group .heading'));
+
+    // Get the total height of the navigation items
+    itemsArray.forEach(function (item) {
+        itemsHeight += item.parentNode.offsetHeight;
+    });
+
+    // Should we auto-collapse any nav items? Try to find the smallest item
+    // that can be collapsed to show all items on the screen. If not possible,
+    // then collapse the largest item and do it again. First, sort the items
+    // by height from smallest to largest.
+    var sortedItems = itemsArray.sort(function (a, b) {
+        return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
+    });
+
+    while (sortedItems.length && itemsHeight > windowHeight) {
+        for (var i = 0; i < sortedItems.length; i++) {
+            // Will collapsing this item help?
+            var itemHeight = sortedItems[i].nextSibling.offsetHeight;
+            if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
+                // It will, so let's collapse it, remove its content height from
+                // our total and then remove it from our list of candidates
+                // that can be collapsed.
+                itemsHeight -= itemHeight;
+                toggleCollapseNav({target: sortedItems[i].children[0]}, true);
+                sortedItems.splice(i, 1);
+                break;
+            }
+        }
+    }
+}
+
+/*
+ Initialize the interactive functionality of the page.
+ */
+function init() {
+    var i, j;
+
+    // Make collapse buttons clickable
+    var buttons = document.querySelectorAll('.collapse-button');
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = toggleCollapseButton;
+
+        // Show by default? Then toggle now.
+        if (buttons[i].className.indexOf('show') !== -1) {
+            toggleCollapseButton({target: buttons[i].children[0]});
+        }
+    }
+
+    var responseCodes = document.querySelectorAll('.example-names');
+    for (i = 0; i < responseCodes.length; i++) {
+        var tabButtons = childrenByClass(responseCodes[i], 'tab-button');
+        for (j = 0; j < tabButtons.length; j++) {
+            tabButtons[j].onclick = toggleTabButton;
+
+            // Show by default?
+            if (j === 0) {
+                toggleTabButton({target: tabButtons[j]});
+            }
+        }
+    }
+
+    // Make nav items clickable to collapse/expand their content.
+    var navItems = document.querySelectorAll('nav .resource-group .heading');
+    for (i = 0; i < navItems.length; i++) {
+        navItems[i].onclick = toggleCollapseNav;
+
+        // Show all by default
+        toggleCollapseNav({target: navItems[i].children[0]});
+    }
+}
+
+// Initial call to set up buttons
+init();
+
+window.onload = function () {
+    autoCollapse();
+    // Remove the `preload` class to enable animations
+    document.querySelector('body').className = '';
+};</script></body></html>
